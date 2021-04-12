@@ -1,0 +1,105 @@
+.todo-item {
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  cursor: pointer;
+  padding: 35px 15px;
+  position: relative;
+  border-bottom: 1px solid rgb(231, 230, 230);
+
+  .check-box {
+    display: flex;
+    flex-shrink: 0;
+    border: 2px solid #eee;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    margin-right: 20px;
+    transition: background-color 0.3s;
+
+    i.material-icons {
+      font-size: 20px;
+      margin: auto;
+      color: #333;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+  }
+
+  &.completed {
+    color: #aaa;
+
+    &:hover .check-box {
+      background: rgb(11, 223, 170);
+      i.material-icons {
+        opacity: 1;
+      }
+    }
+    .check-box {
+      background: rgb(11, 223, 170);
+
+      i.material-icons {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:hover .todo-controls-box {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.35s;
+    transform: translateY(0);
+  }
+  .todo-controls-box {
+    position: absolute;
+    bottom: 3.5px;
+    right: 5px;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+
+    .todo-control-button {
+      background: #f5f7f8;
+      padding: 7px 10px;
+      display: flex;
+
+      i.material-icons {
+        font-size: 20px;
+        color: #555;
+      }
+
+      &:hover {
+        background: #eee;
+      }
+
+      &:active {
+        background: #e5e6e7;
+
+        i.material-icons {
+          color: #333;
+        }
+      }
+
+      &:first-of-type {
+        border-top-left-radius: 7px;
+      }
+
+      &:last-of-type {
+        border-top-right-radius: 7px;
+      }
+    }
+  }
+}
+
+.todo-controls-box .todo-control-button.is-danger:active i.material-icons {
+  color: rgb(155, 27, 27);
+}
+
+.todo-item:hover .check-box {
+  background: #eee;
+  i.material-icons {
+    opacity: 0.28;
+  }
+}

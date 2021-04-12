@@ -2,6 +2,7 @@
 
 @import "../node_modules/bulma/bulma.sass";
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
+@import "tippy.js/dist/tippy.css";
 
 html,
 body {
@@ -12,7 +13,7 @@ body {
 }
 
 .alt-gradient-button {
-  background: linear-gradient(to right, rgb(236, 72, 140), rgb(240, 54, 82));
+  background: linear-gradient(to right, #676e5e, #9aac86);
   border: none;
   color: white;
   font-weight: 600;

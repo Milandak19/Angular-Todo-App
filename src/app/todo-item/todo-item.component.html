@@ -5,11 +5,11 @@
   <div class="todo-text">
     {{ todo.text }}
   </div>
-  <div class="todo-controls-box" (click)="$event.stopPropagation()">
-    <div class="todo-control-button" (click)="editTodo()">
+  <div class="todo-controls-box" appToolTipSingleton (click)="$event.stopPropagation()">
+    <div class="todo-control-button" appToolTip="Edit Todo" (click)="editTodo()">
       <i class="material-icons">edit</i>
     </div>
-    <div class="todo-control-button danger" (click)="deleteTodo()">
+    <div class="todo-control-button danger" appToolTip="Delete Todo" (click)="deleteTodo()">
       <i class="material-icons">delete</i>
     </div>
   </div>

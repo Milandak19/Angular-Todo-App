@@ -6,8 +6,8 @@ import { Todo } from './todo.model';
 })
 export class DataService {
   todos: Todo[] = [
-    new Todo('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida cum sociis natoque penatibus et. Facilisis sed odio morbi quis commodo odio aenean sed.'),
-    new Todo('Second Testing todo', true)
+    new Todo('Hello thanks for coming to see my personal portfolio project ♥.', true),
+    new Todo('You can add a new todo, delete todo, or edit your todo. You can click on the todo to completed or uncompleted your todo.', false)
   ];
 
   constructor() { }

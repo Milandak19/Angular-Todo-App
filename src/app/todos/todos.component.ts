@@ -25,4 +25,8 @@ export class TodosComponent implements OnInit {
     this.showValidationErrors = false
     form.reset()
   }
+
+  setCompleted(todo: Todo) {
+    todo.completed = !todo.completed
+  }
 }
